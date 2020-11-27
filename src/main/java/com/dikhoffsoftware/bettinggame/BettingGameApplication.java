@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource(value = "classpath:application.yaml", factory = YamlPropertySourceFactory.class)
+@PropertySource(value = "classpath:application.yml", factory = YamlPropertySourceFactory.class)
 @Slf4j
 public class BettingGameApplication {
 
