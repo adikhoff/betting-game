@@ -20,9 +20,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
-      - name: start postgresql in docker
+      - name: Start postgresql in docker
         run: docker-compose -f docker/docker-compose.yml up --detach
       - name: Build with Maven
+        run: MAVEN_OPTS=$MAVEN_OPTS:-Dorg.slf4j.simpleLogger.defaultLogLevel=warning
         run: mvn -B package --file pom.xml
       - name: Upload betting-game-*.jar
         uses: actions/upload-artifact@v2
