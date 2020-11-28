@@ -10,19 +10,6 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  sysinfo:
-    runs-on: ubuntu-latest
-
-    steps:
-      - run: pwd
-      - run: ls -la ..
-
-  setup:
-    runs-on: ubuntu-latest
-
-    steps:
-      - run: docker-compose -f ./docker/docker-compose.yml up --detach
-
   build:
     runs-on: ubuntu-latest
 
@@ -32,5 +19,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
+      - name: get system info
+      - run: pwd
+      - run: ls -la ..
+      - name: setup postgres db in docker
+      - run: docker-compose -f docker/docker-compose.yml up --detach
       - name: Build with Maven
         run: mvn -B package --file pom.xml
