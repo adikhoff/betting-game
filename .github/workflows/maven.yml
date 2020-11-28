@@ -10,8 +10,13 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  build:
+  setup:
+    runs-on: ubuntu-latest
 
+    steps:
+      run: docker-compose -f docker/docker-compose.yml up --detach
+
+  build:
     runs-on: ubuntu-latest
 
     steps:
