@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dikhoffsoftware</groupId>
 	<artifactId>betting-game</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>betting-game</name>
 	<description>Spring Boot betting game</description>
 
