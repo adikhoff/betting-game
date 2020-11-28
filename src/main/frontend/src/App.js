@@ -1,46 +1,25 @@
-import React, {Component} from 'react';
+import logo from './logo.svg';
 import './App.css';
-import ApiClient from './ApiClient';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            greeting: 'waiting...',
-        };
-
-    }
-
-    componentDidMount() {
-        const client = new ApiClient();
-        const fetchGreeting = () => {
-            client.httpGet("public")
-                .then(response => response.json())
-                .then(responseJson => {
-                    console.log(responseJson);
-                    this.setState({
-                        greeting: responseJson.message,
-                    })
-                });
-        };
-        fetchGreeting();
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <h1>Welkom in de familie app</h1>
-                <div>response: {this.state.greeting} </div>
-                <div id="login-form">
-                    <form>
-                        <input id="username"/>
-                        <input id="password"/>
-                        <button id="login-btn">Inloggen</button>
-                    </form>
-                </div>
-            </div>
-        );
-    }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
