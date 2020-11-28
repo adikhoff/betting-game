@@ -19,10 +19,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
-      - name: get system info
-      - run: pwd
-      - run: ls -la ..
-      - name: setup postgres db in docker
-      - run: docker-compose -f docker/docker-compose.yml up --detach
+      - name: start postgresql in docker
+        run: docker-compose -f docker/docker-compose.yml up --detach
       - name: Build with Maven
         run: mvn -B package --file pom.xml
