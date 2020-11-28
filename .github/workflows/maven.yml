@@ -24,7 +24,7 @@ jobs:
         run: docker-compose -f docker/docker-compose.yml up --detach
       - name: Build with Maven
         run: |
-          export MAVEN_OPTS=-B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+          export MAVEN_OPTS="-B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN"
           mvn package --file pom.xml
       - name: Upload betting-game-*.jar
         uses: actions/upload-artifact@v2
