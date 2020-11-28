@@ -16,8 +16,8 @@ Before you run anything, start the database:
 ```
 ./start-docker.sh
 # admin interface is reachable at http://localhost:9898
-username: springboot
-password: sa
+# username: springboot
+# password: sa
 ```
 
 To build and test:
