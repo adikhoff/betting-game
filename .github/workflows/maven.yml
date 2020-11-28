@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - run: pwd
-      - run: ls -la
+      - run: ls -la ..
 
   setup:
     runs-on: ubuntu-latest
