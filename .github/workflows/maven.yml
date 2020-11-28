@@ -23,9 +23,7 @@ jobs:
       - name: Start postgresql in docker
         run: docker-compose -f docker/docker-compose.yml up --detach
       - name: Build with Maven
-        run: |
-          export MAVEN_OPTS=$MAVEN_OPTS:-Dorg.slf4j.simpleLogger.defaultLogLevel=WARNING
-          mvn -B package --file pom.xml
+        run: mvn -B package --file pom.xml
       - name: Upload betting-game-*.jar
         uses: actions/upload-artifact@v2
         with:
