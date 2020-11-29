@@ -1,4 +1,4 @@
-package com.dikhoffsoftware.bettinggame.web;
+package com.dikhoffsoftware.bettinggame.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
