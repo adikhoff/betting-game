@@ -1,5 +1,8 @@
+import React, {Component} from 'react';
+import { axios } from 'axios';
 
-export default class ApiClient {
+
+export default class ApiClient extends Component {
     BASE_URL = 'http://localhost:8080/api/';
 
     httpGet = (requestUrl) => {

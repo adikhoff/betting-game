@@ -1,5 +1,6 @@
 package com.dikhoffsoftware.bettinggame.web;
 
+import com.dikhoffsoftware.bettinggame.service.Message;
 import com.dikhoffsoftware.bettinggame.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
