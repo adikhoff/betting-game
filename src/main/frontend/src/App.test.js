@@ -5,7 +5,7 @@ describe('App', () => {
 
     let wrapper;
     beforeAll(() => {
-            wrapper = shallow(<App/>);
+            wrapper = shallow(<App />);
         }
     );
 
